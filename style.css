@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    width: 500px;
+    width: 600px;
     padding: 20px 80px;
     padding-top: 30px;
     margin: 20px auto;
@@ -15,7 +15,7 @@ body {
 }
 
 img {
-    width: 450px;
+    width: 480px;
     margin: auto;
     display: block;
     cursor: pointer;
@@ -36,7 +36,7 @@ p {
 
 input {
     height: 20px;
-    width: 493px;
+    width: 593px;
     color: green;
 }
 

@@ -5,19 +5,25 @@ let quesInEl = document.getElementById("questionIn")
 let ballInEl = document.getElementById("8Ball")
 let answerOutEl = document.getElementById("answer")
 
+
 // Event listener
-document.getElementById("8Ball").addEventListener("click", answer)
+ballInEl.addEventListener("click", answer);
 
 // Event Function
 function answer() {
-    // case insensitve
-    quesInEl.value.toLowerCase();
+    // case insensitive
+    let question = quesInEl.value.toLowerCase();
+    console.log(question)
+    // pick answer
     let randAns = Math.random();
-    console.log(randAns)
-    if (quesInEl.value.length === 0) {
-        answerOutEl.innerHTML = "Please ask a question"
-    } else if (quesInEl === "is javasript awesome?" || quesInEl === "is javascript awesome") {
-        answerOutEl.innerHTML = "Of course it is!"
+    if (question.length === 0) {
+        answerOutEl.innerHTML = "Please ask a question..."
+    } else if (question === "is javascipt awesome" || question === "is javascript awesome?") {
+        answerOutEl.innerHTML = "Of course!"
+    } else if (question === "does a magic 8 ball actually work" || question === "does a magic 8 ball actually work?") {
+        answerOutEl.innerHTML = "How dare you doubt me!"
+    } else if (question === "what is your favorite color" || question === "what is your favorite color?") {
+        answerOutEl.innerHTML = "Black and white, because I'm an 8 ball!"
     } else if (randAns < 0.20) {
         answerOutEl.innerHTML = "Without a doubt."
     } else if (randAns < 0.40) {
